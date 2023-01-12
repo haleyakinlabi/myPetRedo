@@ -18,8 +18,8 @@ const Header = () => {
         
         <header>
 
-
-            <h2>MyPet</h2>
+            <img className="logo" src="https://cdn.pixabay.com/photo/2023/01/12/21/43/21-43-30-459_1280.png"></img>
+           
             
             <BiMenu 
                 onClick={handleMenu}
