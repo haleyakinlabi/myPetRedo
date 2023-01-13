@@ -40,7 +40,7 @@ const Login = () => {
         
 
 
-        <section className="register-box">
+        <section className="login-box">
 
             {/* Error Message */}
             <p ref={errRef} className={errMsg ? "errmsg" :

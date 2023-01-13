@@ -208,11 +208,19 @@ const Register = () => {
                 Must match the first password input field. 
             </p>
 
+            <input
+            className="registerInputSpecies"
+            type="text"
+            placeholder="Species">
+            </input>
+
             <input required style={{ display: "none" }} type="file" id="file" />
             <label htmlFor="file">
             <img className="registerAddImg" src="https://img.icons8.com/ios-glyphs/512/add-image.png" alt="" />
             <span className="addImg">Add a profile picture</span>
             </label>
+
+            
 
         {/* //SUBMIT BUTTON */}
             

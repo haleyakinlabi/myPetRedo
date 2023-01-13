@@ -22,6 +22,7 @@ const Header = () => {
            
             
             <BiMenu 
+                className="BiMenu"
                 onClick={handleMenu}
                 size={35} 
                 style={{zIndex: 3}}>

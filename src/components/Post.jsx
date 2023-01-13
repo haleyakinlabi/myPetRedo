@@ -1,12 +1,25 @@
 import React from 'react'
-import Comment from './Comment'
+
 
 const Post = () => {
   return (
     <div>
       
 
-    <section className='posts-container' >
+    <section className='posts-container'>
+       
+       <div className='filter-container'>
+            <p className='filter-text'>Filter By</p>
+            <button className='filter-friends'>Friends</button>
+            <select className='filter-species'>
+                <option>Species</option>
+                <option>cat</option>
+                <option>dog</option>
+                <option>rodent</option>
+                <option>bird</option>
+                <option>other</option>
+            </select>
+        </div>
 
         <div className="post-example">
             <div>
@@ -14,7 +27,7 @@ const Post = () => {
                 <p className="example-post">Hello my name is Puppy! I am only three months old and love chewing on shoes!</p>
             </div>
         </div>
-        <Comment></Comment>
+        
 
         <div className="post-example">
             <div>
@@ -22,7 +35,7 @@ const Post = () => {
                 <p className="example-post">Hello my name is Puppy! I am only three months old and love chewing on shoes!</p>
             </div>
         </div>
-        <Comment></Comment>
+        
 
         <div className="post-example">
             <div>
@@ -30,7 +43,7 @@ const Post = () => {
                 <p className="example-post">Hello my name is Puppy! I am only three months old and love chewing on shoes!</p>
             </div>
         </div>
-        <Comment></Comment>
+        
 
         <div className="post-example">
             <div>
@@ -38,7 +51,7 @@ const Post = () => {
                 <p className="example-post">Hello my name is Puppy! I am only three months old and love chewing on shoes!</p>
             </div>
         </div>
-        <Comment></Comment>
+       
 
         <div className="post-example">
             <div>
@@ -46,7 +59,7 @@ const Post = () => {
                 <p className="example-post">Hello my name is Puppy! I am only three months old and love chewing on shoes!</p>
             </div>
         </div>
-        <Comment></Comment>
+        
 
         
         
