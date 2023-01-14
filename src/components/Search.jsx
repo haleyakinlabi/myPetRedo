@@ -38,12 +38,6 @@ const Search = () => {
                 <GrAdd className='plus'></GrAdd>
             </div>
 
-            <div className='search-result-box'>
-                <img className='search-img' src='https://cdn.pixabay.com/photo/2021/10/19/10/56/cat-6723256_1280.jpg'></img>
-                <p className='search-name'>Kitten</p>
-                <GrAdd className='plus'></GrAdd>
-            </div>
-
         </div>
 
         <div className='all-users-box'>
