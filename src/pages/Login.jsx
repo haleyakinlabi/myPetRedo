@@ -31,7 +31,7 @@ const Login = () => {
 
         axios.post('https://haley-capstone.fly.dev/users/sign_in', data, { headers })
             .then(response => {  
-                localStorage.setItem('access_token', response.headers['access-token']);
+                localStorage.setItem('access-token', response.headers['access-token']);
                 navigate("/")
 
             // handle successful sign in

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import PostsFilter from './PostsFilter'
+// import PostsFilter from './PostsFilter'
 import Post from './Post'
 
 const Posts = () => {
@@ -8,8 +8,13 @@ const Posts = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await axios.get('https://haley-capstone.fly.dev/posts')
-      setPosts(res.data)
+      const res = await axios.get('https://haley-capstone.fly.dev/posts', {
+        headers: {
+            'Authorization': localStorage.getItem('access-token')
+        }
+      })
+      
+      setPosts(res.data.posts)
     }
     fetchData()
   }, [])
@@ -28,7 +33,7 @@ const Posts = () => {
 
   return (
     <section className='posts-container'>
-      <PostsFilter />
+      
       {posts.map(post => renderPost(post))}
     </section>
   )

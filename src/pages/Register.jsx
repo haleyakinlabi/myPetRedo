@@ -30,6 +30,8 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('')
     const [success, setSuccess] = useState(false)
 
+    
+
     useEffect(() => {
         userRef.current.focus()
     }, [])
@@ -57,41 +59,7 @@ const Register = () => {
         setErrMsg('')
     }, [user, pwd, matchPwd])
 
-    // //handleSubmit Function
-    // const handleSumit = async (e) => {
-    //     e.preventDefault()
-        
-    //     //if button enabled with JS hack
-    //     const v1 = USER_REGEX.test(user)
-    //     const v2 = PWD_REGEX.test(pwd)
-    //     if (!v1 || !v2) {
-    //         setErrMsg("Invalid Entry")
-    //         return 
-    //     }
-    //     try {
-    //         const response = await axios.post(REGISTER_URL,
-    //             JSON.stringify({ user, pwd }),
-    //             {
-    //                 headers: { 'Content-Type' : 'application/json'},
-    //                 withCredentials: true
-    //             }
-    //         )
-    //         console.log(response.data)
-    //         console.log(response.accessToken)
-    //         console.log(JSON.stringify(response))
-    //         setSuccess(true)
-
-    //     } catch (err) {
-    //         if (!err?.response) {
-    //             setErrMsg('No Server Response');
-    //         } else if (err.response?.status === 409) {
-    //             setErrMsg('Username Taken');
-    //         } else {
-    //             setErrMsg('Registration Failed')
-    //         }
-    //         errRef.current.focus();
-    //     }
-    // }
+    
 
 
     return (
@@ -113,6 +81,12 @@ const Register = () => {
            <h1 className="createAccount">Create an Account</h1>
 
            <form className="register-form">
+
+           <input
+            className="registerInputSpecies"
+            type="email"
+            placeholder="Email">
+            </input>
 
         {/* //USERNAME */}
             <label htmlFor="username">
@@ -214,6 +188,15 @@ const Register = () => {
             placeholder="Species">
             </input>
 
+            <input
+            className="registerInputSpecies"
+            type="text"
+            placeholder="Breed">
+            </input>
+
+            
+
+
             <input required style={{ display: "none" }} type="file" id="file" />
             <label htmlFor="file">
             <img className="registerAddImg" src="https://img.icons8.com/ios-glyphs/512/add-image.png" alt="" />
@@ -224,7 +207,7 @@ const Register = () => {
 
         {/* //SUBMIT BUTTON */}
             
-            <button className="sign-up"disabled={!validName || !validMatch ? true : false}>
+            <button className="sign-up">
                 Sign Up
             </button>
 

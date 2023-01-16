@@ -1,23 +1,31 @@
 import React, {useState} from 'react'
-import Post from '../components/Post'
-import Search from '../components/Search'
+import Posts from '../components/Posts'
+
+
+//need useEffect to fetch posts from the api 
+//render posts
 
 
 const Home = () => {
   
-  
+    
   
   
     return (
     <div>
+
+        
         
 
         <div className='post-search'>
 
-            <Post></Post>
 
-            <Search></Search>
+
+
         </div>
+
+
+        <Posts></Posts>
 
     </div>
   )
