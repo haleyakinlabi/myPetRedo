@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from  "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from '../api/axios'
 import { Link } from "react-router-dom"
+
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -57,41 +57,41 @@ const Register = () => {
         setErrMsg('')
     }, [user, pwd, matchPwd])
 
-    //handleSubmit Function
-    const handleSumit = async (e) => {
-        e.preventDefault()
+    // //handleSubmit Function
+    // const handleSumit = async (e) => {
+    //     e.preventDefault()
         
-        //if button enabled with JS hack
-        const v1 = USER_REGEX.test(user)
-        const v2 = PWD_REGEX.test(pwd)
-        if (!v1 || !v2) {
-            setErrMsg("Invalid Entry")
-            return 
-        }
-        try {
-            const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ user, pwd }),
-                {
-                    headers: { 'Content-Type' : 'application/json'},
-                    withCredentials: true
-                }
-            )
-            console.log(response.data)
-            console.log(response.accessToken)
-            console.log(JSON.stringify(response))
-            setSuccess(true)
+    //     //if button enabled with JS hack
+    //     const v1 = USER_REGEX.test(user)
+    //     const v2 = PWD_REGEX.test(pwd)
+    //     if (!v1 || !v2) {
+    //         setErrMsg("Invalid Entry")
+    //         return 
+    //     }
+    //     try {
+    //         const response = await axios.post(REGISTER_URL,
+    //             JSON.stringify({ user, pwd }),
+    //             {
+    //                 headers: { 'Content-Type' : 'application/json'},
+    //                 withCredentials: true
+    //             }
+    //         )
+    //         console.log(response.data)
+    //         console.log(response.accessToken)
+    //         console.log(JSON.stringify(response))
+    //         setSuccess(true)
 
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg('No Server Response');
-            } else if (err.response?.status === 409) {
-                setErrMsg('Username Taken');
-            } else {
-                setErrMsg('Registration Failed')
-            }
-            errRef.current.focus();
-        }
-    }
+    //     } catch (err) {
+    //         if (!err?.response) {
+    //             setErrMsg('No Server Response');
+    //         } else if (err.response?.status === 409) {
+    //             setErrMsg('Username Taken');
+    //         } else {
+    //             setErrMsg('Registration Failed')
+    //         }
+    //         errRef.current.focus();
+    //     }
+    // }
 
 
     return (
@@ -112,7 +112,7 @@ const Register = () => {
 
            <h1 className="createAccount">Create an Account</h1>
 
-           <form onSubmit={handleSumit} className="register-form">
+           <form className="register-form">
 
         {/* //USERNAME */}
             <label htmlFor="username">

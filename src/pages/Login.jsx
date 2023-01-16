@@ -1,5 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import React, { useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom"
+import axios from "axios";
+
 
 
 const Login = () => {
@@ -9,58 +11,59 @@ const Login = () => {
     const errRef = useRef()
 
     //useState
-    const [user, setUser] = useState('')
-    const [pwd, setPwd] = useState('')
-    const [errMsg, setErrMsg] = useState('')
-    const [success, setSuccess] = useState(false)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
+    const navigate = useNavigate()
+   
 
-    // //useEffect
-    // useEffect(() => {
-    //     userRef.current.focus()
-    // }, [])
+    
 
-    useEffect(() => {
-        setErrMsg('')
-    }, [user, pwd])
-
+  
     //handleSubmit
     const handleSubmit = async (e) => {
         e.preventDefault()
-        
-        
+        setIsLoading(true)
+       
+        const data = {email: email, password: password}
+        const headers = {'Content-Type': 'application/json'}
 
+        axios.post('https://haley-capstone.fly.dev/users/sign_in', data, { headers })
+            .then(response => {  
+                localStorage.setItem('access_token', response.headers['access-token']);
+                navigate("/")
 
-
+            // handle successful sign in
+            setIsLoading(false);
+             })
+            .catch(error => {
+                setError("Error while signing in")
+                setIsLoading(false);
+      });
     }
 
     
+        
     return (
 
-        
-        
-
-
         <section className="login-box">
-
-            {/* Error Message */}
-            <p ref={errRef} className={errMsg ? "errmsg" :
-            "offscreen"} aria-live="assertive">{errMsg}</p>
 
             <h1 className="login">Login</h1>
 
             <form onSubmit={handleSubmit} className="register-form">
 
-            {/* Username */}
-                <label htmlFor="username"></label>
+            {/* Email */}
+                <label htmlFor="email"></label>
                 <input 
-                placeholder="Username"
+                placeholder="Email"
                 className="loginInput"
-                type="text"
+                type="email"
                 id="username"
                 ref={userRef}
                 autoComplete="off"
-                onChange={(e) => setUser(e.target.value)}
-                value={user}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 required
                 ></input>
 
@@ -71,8 +74,8 @@ const Login = () => {
                 className="loginInput"
                 type="password"
                 id="password"
-                onChange={(e) => setPwd(e.target.value)}
-                value={pwd}
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
                 required
                 ></input>
 

@@ -34,7 +34,7 @@ const Profile = () => {
     <section className='posts-container'>
 
       <div className='profile-info-container'>
-        <img></img>
+        <img  className="profile-img"src='https://cdn.pixabay.com/photo/2019/12/08/23/03/pet-4682374_1280.jpg'></img>
         <p>Fluffy</p>
       </div>
 
