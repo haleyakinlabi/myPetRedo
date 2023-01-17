@@ -18,7 +18,7 @@ const Header = () => {
         
         <header>
 
-            
+<img className='header-logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
             
             <BiMenu 
                 className="BiMenu"
@@ -30,20 +30,14 @@ const Header = () => {
             <nav className={showMenu ? 'menu-show' : 'menu-hide'}>
 
                 <Link to="/">
-                    <button onClick={handleMenu}>Home</button>
+                    <button className="header-btn" onClick={handleMenu}>Home</button>
                 </Link>
 
                 <Link to="/profile">
-                    <button onClick={handleMenu}>Profile</button>
+                    <button className="header-btn" onClick={handleMenu}>Profile</button>
                 </Link>
 
-                <Link to="/login">
-                    <button onClick={handleMenu}>Login</button>
-                </Link>
-
-                <Link to="/register">
-                    <button onClick={handleMenu}>Register</button>
-                </Link>
+                
 
             </nav>
 

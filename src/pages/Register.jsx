@@ -79,7 +79,7 @@ const Register = () => {
            <p ref={errRef} className={errMsg ? "errmsg" :
            "offscreen"} aria-live="assertive">{errMsg}</p>
 
-           <img className='logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
+           
        
            <h1 className="createAccount">Create an Account</h1>
 
