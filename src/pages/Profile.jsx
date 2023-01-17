@@ -1,5 +1,8 @@
 import React from 'react'
-// import FilterEveryone from '../components/Filters/FilterEveryone'
+import Users from '../components/Users'
+import FilterUsers from '../components/FilterUsers'
+import UsersDropdown from '../components/UsersDropdown'
+
 
 
 
@@ -8,11 +11,15 @@ import React from 'react'
 const Profile = () => {
   return (
     <div className='post-search'>
-
+   
+   <UsersDropdown></UsersDropdown>
+   
+      
+   
    
       
       
-    <section className='posts-container'>
+    {/* <section className='posts-container'>
 
       <form className='create-post-form'>
         
@@ -45,7 +52,7 @@ const Profile = () => {
         <p>Fluffy</p>
       </div>
 
-    </section>
+    </section> */}
 
 
 

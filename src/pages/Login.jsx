@@ -29,7 +29,7 @@ const Login = () => {
         const data = {email: email, password: password}
         const headers = {'Content-Type': 'application/json'}
 
-        axios.post('https://haley-capstone.fly.dev/users/sign_in', data, { headers })
+        axios.post('https://haley-capstone.fly.dev/users/sign_in.json', data, { headers })
             .then(response => {  
                 localStorage.setItem('access-token', response.headers['access-token']);
                 navigate("/")

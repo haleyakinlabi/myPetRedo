@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Posts from '../components/Posts'
 import Dropdown from '../components/Dropdown'
+import UsersDropdown from '../components/UsersDropdown'
 
 
 
@@ -16,9 +17,9 @@ const Home = () => {
     return (
     <div>
 
-        <div className='dropdowns-container'>
+        <div className='feed-and-following'>
         <Dropdown></Dropdown>
-
+        <UsersDropdown></UsersDropdown>
         </div>
 
     </div>
