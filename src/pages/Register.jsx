@@ -30,7 +30,7 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('')
     const [success, setSuccess] = useState(false)
 
-    
+
 
     useEffect(() => {
         userRef.current.focus()
@@ -74,10 +74,13 @@ const Register = () => {
                 </section>
             ) : (
        
+            
         <section className="register-box">
            <p ref={errRef} className={errMsg ? "errmsg" :
            "offscreen"} aria-live="assertive">{errMsg}</p>
 
+           <img className='logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
+       
            <h1 className="createAccount">Create an Account</h1>
 
            <form className="register-form">

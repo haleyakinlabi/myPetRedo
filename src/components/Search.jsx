@@ -4,11 +4,7 @@ import { GrAdd } from "react-icons/gr";
 
 const Search = () => {
 
-    const friends = ["Amy", "Sarah", "James", "Charlie"]
-
-    const friendsFiltered = friends.filter(function(value){
-        return value === "Amy"
-    })
+    
 
 
 

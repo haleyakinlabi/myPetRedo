@@ -1,9 +1,16 @@
 import React from 'react'
+// import FilterEveryone from '../components/Filters/FilterEveryone'
+
+
+
 
 
 const Profile = () => {
   return (
     <div className='post-search'>
+
+   
+      
       
     <section className='posts-container'>
 

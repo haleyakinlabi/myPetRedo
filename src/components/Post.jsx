@@ -27,3 +27,4 @@ const Post = ({body, imageUrl, likesCount, user}) => {
 }
 
 export default Post
+

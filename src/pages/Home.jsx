@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import Posts from '../components/Posts'
+import Dropdown from '../components/Dropdown'
+
 
 
 //need useEffect to fetch posts from the api 
@@ -14,18 +16,10 @@ const Home = () => {
     return (
     <div>
 
-        
-        
-
-        <div className='post-search'>
-
-
-
+        <div className='dropdowns-container'>
+        <Dropdown></Dropdown>
 
         </div>
-
-
-        <Posts></Posts>
 
     </div>
   )

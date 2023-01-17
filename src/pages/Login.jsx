@@ -47,7 +47,12 @@ const Login = () => {
         
     return (
 
+        
+
         <section className="login-box">
+
+            <img className='logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
+       
 
             <h1 className="login">Login</h1>
 
