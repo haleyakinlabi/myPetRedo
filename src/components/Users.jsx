@@ -22,6 +22,7 @@ const Users = () => {
 
     return (
       <User key={user.id}
+        id={user.id}
         username={user.username}
         imageUrl={user.imageUrl}
         species={user.species}
