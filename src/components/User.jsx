@@ -1,5 +1,7 @@
 import React from 'react'
 import Follow from './Follow'
+import Unfollow from './Unfollow'
+
 
 
 const User = ({id, username, imageUrl, species, breed }) => {
@@ -13,6 +15,8 @@ const User = ({id, username, imageUrl, species, breed }) => {
         <p className='post-species-breed'>{species}</p>
         <p className='post-species-breed'>{breed}</p>
         <Follow leaderId={id}></Follow>
+        <Unfollow leader_id={id}></Unfollow>
+        
         
     </div>
   )

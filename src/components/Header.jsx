@@ -10,6 +10,7 @@ const Header = () => {
 
     //handleMenu Function
     const handleMenu = () => {
+        
         setShowMenu(!showMenu)
     }
 
@@ -18,8 +19,9 @@ const Header = () => {
         
         <header>
 
-<img className='header-logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
-            
+            <img className='header-logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
+                
+        
             <BiMenu 
                 className="BiMenu"
                 onClick={handleMenu}
