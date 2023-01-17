@@ -29,7 +29,7 @@ const Follow = ({ leaderId }) => {
     return (
         <div>
             {isFollowing ? (
-                <p>Following</p>
+                <p className='following-txt'>Following</p>
             ) : (
                 <button className="follow-btn"onClick={handleFollow}>+</button>
             )}
