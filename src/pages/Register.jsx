@@ -31,6 +31,7 @@ const SignUp = () => {
 
   return (
     <div className="register-box">
+
         <form onSubmit={handleSubmit} className="register-form">
         
         <p className="createAccount">Create an Account</p>
