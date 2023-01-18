@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
-import { BiMenu } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false)
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu)
-  }
+  
 
   return (
     <header>

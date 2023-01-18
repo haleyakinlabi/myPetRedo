@@ -3,12 +3,13 @@ import axios from 'axios';
 
 const ACCESS_TOKEN = localStorage.getItem("access-token")
 
-const Like = ({ post_id }) => {
+const Like = ({ postId }) => {
     const [isLiked, setIsLiked] = useState(false);
 
     const handleLike = async () => {
+        debugger
         try {
-            const response = await axios.post(`https://haley-capstone.fly.dev/posts/${post_id}/likes`, {}, {
+            const response = await axios.post(`https://haley-capstone.fly.dev/posts/${postId}/likes`, {}, {
                 headers: {
                     'Authorization': `Bearer ${ACCESS_TOKEN}`
                 }

@@ -23,6 +23,7 @@ const FilterEveryone = () => {
   const renderPost = post => {
     return (
       <Post key={post.id}
+        id={post.id}
         body={post.body}
         imageUrl={post.imageUrl}
         likesCount={post.likesCount}
