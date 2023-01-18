@@ -1,5 +1,6 @@
 import React from 'react'
 import { SlLike } from "react-icons/sl";
+import Like from './Like';
 
 const Post = ({body, imageUrl, likesCount, user}) => {
 
@@ -21,7 +22,9 @@ const Post = ({body, imageUrl, likesCount, user}) => {
     <div className="post-example">
         {renderUser(user)}
         <p className='post_body'>{body}</p>
-        <p className='likes_count'><button className='like_button'><SlLike></SlLike></button>{likesCount}</p>
+        <SlLike></SlLike>
+        <Like></Like>
+
     </div>
   )
 }

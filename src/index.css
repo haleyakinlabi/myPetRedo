@@ -7,31 +7,8 @@ header {
   width: 100vw;
   display: flex;
   flex-direction: row;
-
-  /*
-  background-color: none;
-  display: flex;
-  flex-direction: row;
+  gap: 10px;
   align-items: center;
-  justify-content:space-between;
-  padding: 0px 20px;
-  position: absolute;
-  margin-bottom: 800px;
-  */
-}
-
-header .menu-icon-container {
-  text-align: right;
-  flex-grow: 1;
-  z-index: 3;
-}
-
-header .menu-icon-container .menu-icon {
-  cursor: pointer;
-  height: 40px;
-  margin-right: 5px;
-  margin-top: 2px;
-  width: 40px;
 }
 
 header img.logo {
@@ -39,30 +16,8 @@ header img.logo {
   width: auto;
 }
 
-header nav {
-  align-items: center;
-  background-color: #cadbff;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: 100vh;
-  padding-top: 70px;
-  position: absolute;
-  top: 0;
-  width: 300px;
-}
 
-header nav.menu-show {
-  right: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-header nav.menu-hide {
-  right: -350px;
-  transition: all 0.3s ease-in-out;
-}
-
-header nav .header-btn {
+.header-btn {
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   background-color: #7f93c0;
@@ -74,8 +29,8 @@ header nav .header-btn {
   width: 100px;
 }
 
-header nav .header-btn:hover {
-  background-color: black;
+.header-btn:hover {
+  color: black;
 }
 
 
@@ -548,8 +503,8 @@ body{
 
 .create-post-container{
   display: flex;
-  flex-direction: row;
-  gap: 5px;
+  margin-right: 35px;
+  justify-content: center;
 }
 
 .create-post-text{
@@ -637,8 +592,6 @@ body{
   
 }
 
-
-
 .friend-img{
   height: 30px;
   width: 30px;
@@ -679,3 +632,6 @@ body{
   color:#BBD0FF;
   margin-left: 10px;
 }
+
+/* ------------------------------------------------- */
+/* Posts */

@@ -19,23 +19,21 @@ const Header = () => {
         ></img>
       </a>
 
-      <div className='menu-icon-container'>
-        <BiMenu className='menu-icon' onClick={toggleMenu}></BiMenu>
-      </div>
-
-      <nav className={showMenu ? 'menu-show' : 'menu-hide'}>
-        <Link to='/'>
-          <button className='header-btn' onClick={toggleMenu}>
+      <a href='/'>
+          <button className='header-btn'>
             Home
           </button>
-        </Link>
+      </a>
 
-        <Link to='/profile'>
-          <button className='header-btn' onClick={toggleMenu}>
+      <a href='/profile'>
+          <button className='header-btn'>
             Profile
           </button>
-        </Link>
-      </nav>
+      </a>
+
+    
+
+
     </header>
   )
 }
