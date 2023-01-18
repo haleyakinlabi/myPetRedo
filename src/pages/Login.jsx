@@ -54,9 +54,11 @@ const Login = () => {
             <img className='logo' src='https://cdn.pixabay.com/photo/2023/01/12/21/43/paw-7714934_1280.png' alt='logo'></img>
        
 
-            <h1 className="login">Login</h1>
+           
 
-            <form onSubmit={handleSubmit} className="register-form">
+            <form onSubmit={handleSubmit} className="login-form">
+
+            <h1 className="login">Login</h1>
 
             {/* Email */}
                 <label htmlFor="email"></label>
@@ -86,18 +88,12 @@ const Login = () => {
 
             <button className="sign-up">Sign In</button>
 
+            <p className="register-txt">Don't have an account? <a className="register-txt"href="/register">Sign up</a></p>
+
             </form>
 
-            <p className="login-link1">
-                Don't have an account? 
-                <span>
-                    <Link to="/register">
-                    <p className="login-link2">Sign Up</p>
-                    </Link>
-                </span>
-            </p>
-
-
+            
+        
         </section>
     )
 }
