@@ -1,12 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header{
+header {
+  background-color: #7f93c0;
   height: 50px;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100vw;
+  display: flex;
+  flex-direction: row;
+
+  /*
   background-color: none;
   display: flex;
   flex-direction: row;
@@ -15,61 +17,74 @@ header{
   padding: 0px 20px;
   position: absolute;
   margin-bottom: 800px;
+  */
 }
 
-.header-logo{
+header .menu-icon-container {
+  text-align: right;
+  flex-grow: 1;
+  z-index: 3;
+}
+
+header .menu-icon-container .menu-icon {
+  cursor: pointer;
   height: 40px;
-  width: 80px;
+  margin-right: 5px;
+  margin-top: 2px;
+  width: 40px;
 }
 
-nav{
-  position: absolute;
-  height: 100vh;
-  width: 300px;
-  background-color:#cadbff;
-  top: 0;
+header img.logo {
+  height: 40px;
+  width: auto;
+}
+
+header nav {
+  align-items: center;
+  background-color: #cadbff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 70px;
   gap: 20px;
+  height: 100vh;
+  padding-top: 70px;
+  position: absolute;
+  top: 0;
+  width: 300px;
 }
 
-.header-btn{
-  background-color: #7f93c0;
-  color: white;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  border: 1px #7f93c0 ;
-  width: 100px;
-  height: 30px;
-  cursor: pointer;
-}
-.header-btn:hover{
-  background-color: black;
-}
-
-.BiMenu{
-  cursor: pointer;
-}
-
-.menu-show{
+header nav.menu-show {
   right: 0;
   transition: all 0.3s ease-in-out;
 }
 
-.menu-hide{
+header nav.menu-hide {
   right: -350px;
   transition: all 0.3s ease-in-out;
 }
+
+header nav .header-btn {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  background-color: #7f93c0;
+  border-radius: 20px;
+  border: 1px #7f93c0 ;
+  color: white;
+  cursor: pointer;
+  height: 30px;
+  width: 100px;
+}
+
+header nav .header-btn:hover {
+  background-color: black;
+}
+
 
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   padding: 1rem 0.5rem;
 }
 
@@ -84,7 +99,6 @@ body{
   object-fit:cover;
   align-self:center;
 }
-
 /* --------------------------------------------------------- */
 /* Register */
 
