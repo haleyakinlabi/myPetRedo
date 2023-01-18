@@ -21,7 +21,7 @@ const Like = ({ postId }) => {
     }
 
     return (
-        <button onClick={handleLike}>
+        <button className="like-btn"onClick={handleLike}>
             {isLiked ? 'Unlike' : 'Like'}
         </button>
     );

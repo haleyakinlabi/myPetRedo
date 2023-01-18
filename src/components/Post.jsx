@@ -22,7 +22,6 @@ const Post = ({body, imageUrl, likesCount, id, user}) => {
     <div className="post-example">
         {renderUser(user)}
         <p className='post_body'>{body}</p>
-        <SlLike></SlLike>
         <Like postId={id}></Like>
 
     </div>

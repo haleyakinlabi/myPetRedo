@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
+  
+  const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -22,6 +26,7 @@ const SignUp = () => {
     axios
       .post("https://haley-capstone.fly.dev/users/sign_up", formData)
       .then(res => {
+        navigate("/login")
         console.log(res);
       })
       .catch(err => {
