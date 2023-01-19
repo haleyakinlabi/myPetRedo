@@ -28,7 +28,7 @@ const Posts = () => {
         likesCount={post.likesCount}
         species={post.species}
         breed={post.breed}
-        user={post.user} />
+        user={post.user}/>
     )
   }
 

@@ -26,7 +26,7 @@ const Users = () => {
         username={user.username}
         imageUrl={user.imageUrl}
         species={user.species}
-        breed={user.breed} />
+        breed={user.breed}/>
     )
   }
 

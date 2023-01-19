@@ -14,7 +14,7 @@ const SignUp = () => {
     password_confirmation: "",
     species: "",
     breed: "",
-    imageURL:""
+    avatar_url:""
   });
 
   const handleChange = e => {
@@ -110,8 +110,8 @@ const SignUp = () => {
         <label>
             <input
             type="text"
-            name="imageURL"
-            value={formData.imageURL}
+            name="avatar_url"
+            value={formData.avatar_url}
             onChange={handleChange}
             placeholder="ImageURL"
             className="registerInput"
