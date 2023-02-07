@@ -26,6 +26,13 @@ const Header = () => {
           </button>
       </a>
 
+      <a href='/login'>
+          <button className='header-btn'>
+            Logout
+          </button>
+      </a>
+      
+
     
 
 
